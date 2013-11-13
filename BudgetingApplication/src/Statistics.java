@@ -15,9 +15,9 @@ public class Statistics {
 		currency = new DecimalFormat("##.##");
 	}
 	
-	public void inputIncome(double i)
+	public void inputIncome(int i)
 	{
-		income = i;
+		income = (double) i;
 	}
 	
 	public void inputExpenses(double e)

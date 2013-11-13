@@ -12,10 +12,10 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		int choice = 0;
 		
-		/*Income income = new Income();
+		Income income = new Income();
 		Expenses expenses = new Expenses();
-		Miscellaneous miscellaneous = new Miscellaneous();
-		*/Statistics stats = new Statistics();
+		//Miscellaneous miscellaneous = new Miscellaneous();
+		Statistics stats = new Statistics();
 		
 		do{
 			System.out.print(
@@ -30,7 +30,7 @@ public class Main {
 			try{
 				choice = scan.nextInt();
 			}
-			catch(InputMismatchException x)
+			catch(InputMismatchException e)
 			{
 				choice = -1;
 			}
@@ -38,12 +38,12 @@ public class Main {
 			switch (choice) {
 	            case 1:
 	            	//TODO
-	            	System.out.println("input income");
-	                //input = System.in.toString().split(".");
+	            	System.out.print("Annual Income: ");
+	                income.setIncome(scan.nextDouble());
 	            	break;
 	            case 2:  
 	            	//TODO
-	            	System.out.println("input expenses");
+	            	expenses.setExpenses(scan);
 	            	break;
 	            case 3:  
 	            	//TODO
