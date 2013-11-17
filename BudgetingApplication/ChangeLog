@@ -1,0 +1,58 @@
+0.0.0
+  NEW
+	- initial creation of project (no work done)
+0.0.1
+  NEW
+	- Added MAIN class and STATISTICS class
+	MAIN
+		- implemented textUI for choosing options
+		- implemented ability to quit program
+	STATISTICS
+		- set up basic idea, not implemented at all
+0.0.2
+  NEW
+	- Added INCOME class and EXPENSES class
+	INCOME
+		- implemented ability to input income
+	EXPENSES
+		- implemented ability to input expenses and percentage
+		- created 2 arrays structures for incorporating the list of expenses.
+		- made inputs into a loop until exit (able to exit on start)
+  CHANGES
+	- uncommented outline code
+	- minor consistancy changes
+0.0.3
+  NEW
+    - Added CHANGELOG.txt to map out changes
+    MAIN
+    	- Added versioning line to list out application name and version
+    BUDGET
+    	- lists out current budgets or notes that there are no budgets prior
+    	  to inputting.
+    INCOME
+    	- thought up logic for other forms of income
+    	- did a basic set up for inputting multiple incomes
+  CHANGES
+  	- Refactored EXPENSES to BUDGET due to implementation more like setting 
+  	  thresholds
+  	- minor consistancy changes
+  	  - set up so that MAIN runs functions from each class so all is centralized
+  	  - changed some wording and formatting to make it a little more 
+  	    user friendly
+  	BUDGET <- EXPENSES
+    	- changed variable names
+    	- Allow for input of decimal percentages
+    STATISTICS
+    	- got rid of useless variables for now since the plan is to calculate
+    	  without inputting values into stats, but directly from other classes
+    	- STATISTICS is now planned to be the central hub to print out 
+    	  calculations
+    MAIN
+    	- set up precaution to running stats without any budgeting (for now
+    	  since stats only has calculate by budgets given);
+  TODO
+    - create a format for (TEXTFile/CSV) for loading and saving
+    - create logic to parse SAVEFILE when loading
+    - create logic to save SAVEFILE (on exit? or changing between "HUBs")
+    - create console for this project to have the console clear each time 
+      choices are available.
