@@ -56,3 +56,17 @@
     - create logic to save SAVEFILE (on exit? or changing between "HUBs")
     - create console for this project to have the console clear each time 
       choices are available.
+0.0.4
+  NEW
+    - Added WAGES class
+    INCOME
+      - added hourly income to be added
+    WAGES
+      - Set wages value
+      - Set if it is Annual or Hourly, more to come, but currently its just that
+  CHANGES
+    MAIN
+      - allowed for statistics without budgets
+    STATISTICS
+      - Encapsulated Budgeting statistics so that budgets will not be calculated
+        when there is nothing in budgets (prevents null exception)

@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -5,6 +7,8 @@ import java.util.Scanner;
 public class Income {
 
 	protected double annualIncome;
+	protected ArrayList<Wages> incomes = new ArrayList<Wages>();
+	protected DecimalFormat currency = new DecimalFormat("0.00");
 	
 	public Income()
 	{
@@ -23,8 +27,8 @@ public class Income {
 			System.out.print( //TODO change choices
 					"==    ADD INCOME    ==\n" +
 					"Choice........Function\n" +
-					"1........Annual Income\n" + /*
-					"2.............CHOICE 2\n" + 
+					"1........Annual Income\n" +
+					"2........Hourly Income\n" + /* 
 					"3.............CHOICE 3\n" +
 					"4.............CHOICE 4\n" + */
 					"0.................Exit\n" + 
@@ -42,10 +46,11 @@ public class Income {
 	            case 1:
 	            	//TODO choice 1
 	            	setAnnualIncome(scan);
-	            	break; /*
+	            	break;
 	            case 2:  
 	            	//TODO choice 2
-	            	break;
+	            	setHourlyIncome(scan);
+	            	break; /*
 	            case 3:  
 	            	//TODO choice 3
 	            	break;
@@ -68,6 +73,14 @@ public class Income {
 		System.out.print("Annual Income (Format $$.$$): ");
         double i = scan.nextDouble();
 		annualIncome = i;
+	}
+	
+	public void setHourlyIncome(Scanner scan){
+		System.out.print("Hourly Income (Format $$.$$): ");
+		double i = scan.nextDouble();
+		System.out.print("Hours per week: ");
+		double h = scan.nextDouble();
+		System.out.println("Wages per paycheck (2 weeks): " + currency.format(h*i*2));
 	}
 	
 	//TODO figure out what other logic to place here

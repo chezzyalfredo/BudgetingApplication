@@ -67,13 +67,20 @@ public class Statistics {
 	
 	public void calculateBudgets(Income income, Budget budget)
 	{
-		System.out.println("These are your expected budgets: \n" +
-						   "ANNUAL INCOME: " + income.annualIncome + "\n"+
-						   "NAME  |  PERCENTAGE OF INCOME% | $ESTIMATED AMOUNT");
-		for(int i = 0; i < budget.budgets.size(); i++){
-			String estAmount = currency.format(income.annualIncome*((double)budget.percentages.get(i)/100.00));
-			System.out.println(budget.budgets.get(i) + " | " + budget.percentages.get(i) + "%  |  " +
-		                     "$" + estAmount);
+		System.out.println("[INCOME] ANNUAL INCOME: " + income.annualIncome);
+		if(budget.budgets.size() != 0)
+		{
+			System.out.println("[BUDGETS] These are your expected budgets: \n" +
+					   "NAME  |  PERCENTAGE OF INCOME% | $ESTIMATED AMOUNT");
+			for(int i = 0; i < budget.budgets.size(); i++){
+				String estAmount = currency.format(income.annualIncome*((double)budget.percentages.get(i)/100.00));
+				System.out.println(budget.budgets.get(i) + " | " + budget.percentages.get(i) + "%  |  " +
+			                     "$" + estAmount);
+			}
+		}
+		else
+		{
+			System.out.println("[BUDGETS] No Budgets are set.");
 		}
 	}
 }

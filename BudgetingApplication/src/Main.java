@@ -59,14 +59,7 @@ public class Main {
 	            	break; */
 	            case 4:
 	            	//TODO
-	            	if(budget.budgets.size() == 0)
-	            	{
-	            		System.out.println("WARNING: Please input BUDGETS!\n"); //TODO plan to allow run in future but just show "No Budgets Set"
-	            	}
-	            	else
-	            	{
-	            		stats.calculate(scan, income, budget);
-	            	}
+	            	stats.calculate(scan, income, budget);
 	            	break;
 	            case 0:  
 	        		System.out.println("==TERMINATED==");
@@ -85,7 +78,24 @@ public class Main {
 
 	static void clearConsole()
 	{
-		//TODO set up a console specific for this project so that you can clear it anytime
+	    try
+	    {
+	        String os = System.getProperty("os.name");
+
+	        if (os.contains("Windows"))
+	        {
+	            Runtime.getRuntime().exec("cls");
+	        }
+	        else
+	        {
+	        	System.out.println(os);
+	            Runtime.getRuntime().exec("clear");
+	        }
+	    }
+	    catch (Exception exception)
+	    {
+	        //  Handle exception.
+	    }
 	}
 	
 }
